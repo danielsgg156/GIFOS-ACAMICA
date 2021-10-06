@@ -1,0 +1,272 @@
+
+.crear-gifs{
+    display: none;
+    margin-top: 125px;
+
+    .creargif{
+     display: flex;
+     
+     justify-content: center;
+        .camara{
+            display: flex;
+            position: absolute;
+            z-index: 2;   
+             left: 5%;
+            top: 195px;   
+             }
+        .contenido{
+           width: 50%;
+            height: 390px;
+            border: 1px solid $color-principal;
+        
+        }
+            .caja1{
+                border-top: 1px solid #50e3c2;
+                border-left: 1px solid #50e3c2;
+                top: 6px;
+                left: 6px;
+                width: 1.7rem;
+                height: 1.7rem;
+                position: relative;
+                z-index: 3;
+            }
+            .caja2{
+                border-top: 1px solid #50e3c2;
+                border-right: 1px solid #50e3c2;
+                top: -21px;
+                right: -94%;
+                width: 1.7rem;
+                height: 1.7rem;
+                position: relative;
+                z-index: 4;
+            }
+            .caja3{
+                border-bottom: 1px solid #50e3c2;
+                border-left: 1px solid #50e3c2;
+                bottom: -300px;
+                left: 6px;
+                width: 1.7rem;
+                height: 1.7rem;
+                position: relative;
+                z-index: 5;
+            }
+            .caja4{
+                border-bottom: 1px solid #50e3c2;
+                border-right: 1px solid #50e3c2;
+                bottom: -274px;
+                right: -94%;
+                width: 1.7rem;
+                height: 1.7rem;
+                position: relative;
+                z-index: 6;
+            }
+         .subir-gifo{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+             position: relative;
+             z-index: 7;
+             width: 100%;
+             height: 100%;
+             margin-top: -110px;
+             .grabar{
+                width: 570px;
+                background: $color-principal;
+                opacity: 60%;
+                position: absolute;
+                z-index: 8;
+                height: 380px;
+                display: none;
+                // display: none;
+                 .btns-gif{
+                    display: none;
+                    width: 110px;
+                    justify-content: center;
+                    float: right;
+                    margin-top: 16px;
+                    margin-right: 20px;
+                    .btn-crear{
+                        color: $color-principal;
+                        font-size: 18px;
+                        width: 32px;
+                        height: 32px;
+                        background: white;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border-radius: 6px;
+                        opacity: 80%;
+                        margin:0 10px;
+                        &:hover{
+                            opacity: 100%;
+                        }
+                    }
+                 }
+             }
+            
+             .info{
+              
+                text-align: center;
+                
+                flex-direction: column;
+                 display: none; 
+                align-items: center;
+                margin-top: 148px;
+                 .icono-cargando{
+                    width: 30px;
+                   position: fixed;
+                   animation: giragira 5s linar infinite;
+                 }
+                
+                 .p-subir-gifo{
+                     margin-top: 20px;
+                    font-size: 15px;
+                    font-family: "Montserrat", sans-serif;
+                    color: white;
+                 
+                 }
+             }
+           
+             .h2-crear-gif{
+                 width: 100%;
+                 text-align: center;
+                 font-size: 25px;
+                 font-family: "Montserrat", sans-serif;
+                 color: $color-principal;
+                 margin-bottom: 15px;
+             }
+             .text{
+                font-size: 16px;
+                width: 100%;
+                text-align: center;   
+                font-family: 'Roboto', sans-serif;
+             }
+             .h2-permiso{
+                display: none;
+                width: 100%;
+                text-align: center;
+                font-size: 25px;
+                font-family: "Montserrat", sans-serif;
+                color: $color-principal;
+                margin-bottom: 15px;
+                width: 236px;
+             }
+             .p-permiso{
+                display: none;
+                font-size: 16px;
+                width: 100%;
+                text-align: center;   
+                font-family: 'Roboto', sans-serif;
+                width: 292px;
+             }
+            
+            .grabacion-video{
+                display: none;
+                width: 570px;
+                height: 380px;
+            }
+         }
+        
+        
+    }
+    .crear-controles{
+
+        .controles{
+            .btn-subir{
+                display: flex;
+                justify-content: center;
+               margin-top: 12px;
+                margin-bottom: 12px;
+               .partes{
+                   transition: 0.2s ease all;
+                    font-family: 'Roboto', sans-serif;
+                    margin: 10px 5px;
+                    border-radius: 50%;
+                    font-size: 16px;
+                    color: #572EE5;
+                    padding: 8px 15px;
+                    border: 1px solid #572EE5;
+                    
+               }
+            }
+            .contador{
+                display: flex;
+                justify-content: center;
+                margin-left: 50%;
+               margin-top: -50px;
+                margin-bottom:38px;
+                .p-contador{
+                    margin-right: 52px;
+                    display: none;
+                    font-size: 15px;
+                    color: $color-principal;
+                    font-family: "Montserrat", sans-serif;
+                }
+                .repetir-captura{
+                    display: none;
+                    margin-right: 168px;
+                    transition: 0.2s ease;
+                    border: none;
+                    background: none;
+                    font-size: 13px;
+                    color: $color-principal;
+                    font-family: "Montserrat", sans-serif;
+                    &:hover{
+                        border-bottom: 2px solid $color-secundario;
+                    }
+                }
+            }
+            .linea{
+                width: 796px;
+                height: 7px;
+                background-color: $color-principal;
+                border-radius: 5px;
+                margin: auto;
+            }
+            .div-subir{
+                display: flex;
+                justify-content: center;
+                margin-top: 26px;
+                margin-bottom: 50px;
+               
+                .btn{
+                    font-size: 13px;
+                    color: $color-principal;
+                    font-family: "Montserrat", sans-serif;
+                    border: 1px solid;
+                    border-radius: 20px;
+                    padding: 14px;
+                    &:hover{
+                        background-color: $color-principal;
+                        color: white;
+                    }
+                }
+                #btn-comenzar{
+                    
+                }
+                #btn-grabar{
+                    display: none;
+                }
+                #btn-finalizar{
+                    display: none;
+                }
+                #btn-subir-gifos{
+                    display: none;
+                }
+            }
+
+            .rollo-filmar{
+            
+                right: 0px;
+                margin-right: 8%;
+                margin-top: -226px;
+                position: absolute;
+                img{
+               
+                }
+            }
+        }
+    }
+}
+

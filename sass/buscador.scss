@@ -1,0 +1,492 @@
+.buscador {
+  margin-top: 135px;
+  text-align: center;
+  margin-bottom: 60px;
+  color: $color-principal;
+  body.dark &{
+    h1{
+        color: $color-light;
+
+    }
+    .container-buscador{
+       
+        .form-buscador{
+          
+            .input-buscador{
+                background-color: $color-dark-gray;
+
+            }
+        }
+    }
+    
+  }
+  h1 {
+    width: 240px;
+    margin: 0 auto 40px auto;
+    font-size: 25px;
+    font-family: "Montserrat", sans-serif;
+  }
+  .img-buscador {
+    width: 300px;
+  }
+  .container-buscador {
+    display: flex;
+    justify-content: center;
+    .ul-sug{
+      transition: 0.1s ease;
+      position: absolute;
+      display: none;
+    margin-top: 20px;
+    background-color: white;
+      width: 300px;
+  
+      border-radius: 0 0 25px 25px;
+      border-bottom: 1px solid $color-principal;
+      border-left: 1px solid $color-principal;
+      border-right: 1px solid $color-principal;
+      height: auto;
+      .li-sugerencias{
+        transition: 0.1s ease;
+        display: flex;
+        justify-content: flex-start;
+        margin:15px 10px ;
+        cursor: pointer;
+        .texto-sugerencia{
+          transition: 0.1s ease;
+          color: $color-gray;
+          font-size: 14px;
+            font-family: "Montserrat", sans-serif;
+        }
+        .lupa{
+          transition: 0.1s ease;
+          margin-right: 10px;
+          color: $color-gray;
+          font-size: 14px;
+        }
+      }
+    
+    }
+
+    .form-buscador {
+      transition: 0.1s ease;
+      border: 1px $color-principal solid;
+      width: 300px;
+      margin: auto;
+      border-radius: 15px; 
+      margin-top: -4px;
+      display: flex;
+      justify-content: space-between;
+     
+      body.dark &{
+     
+        border: 1px solid $color-light;
+      }
+     
+      .btn-buscador {
+        border: none;
+        outline: none;
+        background: none;
+        color: $color-gray;
+        margin-left: 10px;
+        margin-top: 7px;
+        display: none;
+        body.dark &{
+            color:$color-light ;
+        }
+      }
+
+      .input-buscador {
+        margin-top: 4px;
+        border: none;
+        font-size: 15px;
+        padding: 2px 0px;
+        outline: none;
+        margin-left: 17px;
+        width: 234px;
+      }
+      .btn-buscar-derecha {
+        border: none;
+        margin-top: 7px;
+        outline: none;
+        background: none;
+        color: $color-principal;
+        margin-right: 10px;
+        body.dark &{
+            color:$color-light ;
+        }
+        
+      }
+     
+     
+    }
+    .sugerencia{
+      width:300px;
+      background-color: #572ee5;
+      height: 200px;
+      margin: auto;
+      display: none;
+    }
+  }
+  .linea{
+    border-bottom: 1px solid $color-principal;
+    width: 30%;
+    margin: 25px auto;
+    display: none;
+  }
+  .titlo-trending {
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    color: #572ee5;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    body.dark &{
+        color: $color-light;
+    }
+  }
+  .trending-topicos{
+    display: flex;
+    justify-content: center;
+   flex-wrap: wrap;
+    text-align: center;
+    margin: auto;
+    width: 250px;
+    .p-topicos{
+      cursor: pointer;
+      color: $color-principal;
+      font-size: 14px;
+      font-family: "Montserrat", sans-serif;
+      &::first-letter{
+        text-transform: uppercase;
+      }
+      &::after{
+        
+        content:", ";
+      }
+
+      body.dark &{
+        color: $color-light;
+      }
+    }
+  }
+  .btn-ver-mas {
+    display: none;
+    padding: 10px;
+    border: 1px solid $color-principal;
+    width: 100px;
+    margin-bottom: 60px;
+    border-radius: 25px;
+    margin: auto;
+    color: $color-principal;
+    font-size: 13px;
+    cursor: pointer;
+    font-family: "Montserrat", sans-serif;
+    body.dark &{
+      border: 1px solid $color-light;
+      color: $color-light;
+    }
+  }
+  .efecto-vermas {
+    background-color: $color-principal;
+    color: $color-light;
+    body.dark &{
+      background-color: $color-light;
+      color: $color-dark;
+    }
+  }
+  .contenedor-gifs {
+    margin-top: 120px;
+    padding-bottom: 75px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+
+    .tamano-gif-expandido{
+        transition:0.3s ease all ;
+        background: $color-light;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0%;
+        margin: 0px 5px;
+        position: fixed;
+        body.dark &{
+          background-color: $color-dark-gray-trending;    
+         }
+        .gifExpandido{
+          transition:0.3s ease all ;
+          width: 250px;
+          position: absolute;
+         height: 250px;
+         margin: auto;
+         left: 50%;
+         margin-left: -125px;
+         top: 50%;
+         margin-top: -125px;
+         }
+         .contenedor-botones-expandido{
+          color: #572ee5;
+          position: absolute;
+          bottom: 27%;
+          font-size: 20px;
+          width: 130px;
+          margin-left: 54%;
+         .fas {
+          border: 1px solid $color-principal;
+                  border-radius:10px ;
+                  padding: 10px;
+                 margin-left: -16px ;
+         }
+          .far{
+            border: 1px solid $color-principal;
+                border-radius:10px ;
+                padding: 10px;
+          }
+        }
+        .cerrar-btn{
+          width: 100px;
+          z-index: 12;
+          margin-left: 76%;
+         font-size: 20px;
+          margin-top: 245px;
+         }
+    }
+      .tamano-gif{
+        transition:0.01s ease all ;
+        width: 140px;
+      height: 120px;
+      margin: 10px 5px;
+      .gifs{
+        transition:0.01s ease all ;
+        width: 140px;
+        height: 120px;
+        z-index: 2;
+        margin-top: 0;
+      }
+      .btn-movil{
+        transition:0.3s ease all ;
+        position: absolute;
+        width: 140px;
+        height: 120px;
+        z-index: 5;
+        margin-top: 0px;
+      }
+      .cerrar-btn{
+        display: none;
+      }
+      .div-img{
+        transition:0.3s ease all ;
+        display: none;
+      }
+      .contenedor-botones{
+        transition:0.3s ease all ;
+       display: none;
+       
+      }
+      
+      
+      }
+    
+  }
+ 
+  .titulo-resultado{
+    color: $color-principal;
+    font-size: 25px;
+    margin:30px 0;
+    font-family: "Montserrat", sans-serif;
+    &:first-letter {
+      text-transform: uppercase;
+  }
+  }
+}
+
+
+@media (min-width: 768px) {
+  .buscador {
+    .contenedor-gifs {
+      width: 760px;
+      margin: auto;
+      margin-top: 144px;
+      .tamano-gif {
+        width: 180px;
+        height: 150px;
+        margin: 10px 5px;
+        .gifs{
+          width: 180px;
+          height: 150px;
+        }
+        .btn-movil{
+          width: 180px;
+          height: 150px;
+          margin-top: -154px;
+        }
+      }
+    }
+    
+  }
+}
+@media (min-width: 1024px) {
+  .buscador {
+    h1 {
+      width: 580px;
+      font-size: 35px;
+    }
+    .img-buscador {
+      width: 25%;
+    }
+    .container-buscador {
+      .ul-sug{
+        width: 38%;
+        margin-top: 38px;
+        .li-sugerencias{
+          margin: 15px 12px;
+          .texto-sugerencia{
+            font-size: 16px;
+          }
+          .lupa{
+            margin-right: 10px;
+            font-size: 20px;
+          }
+        }
+      }
+      .form-buscador {
+        width: 38%;
+      
+        border-radius: 25px;
+
+        .btn-buscador {
+          font-size: 20px;
+          left: 0px;
+          margin-top: 4px;
+        }
+
+        .input-buscador {
+          font-size: 20px;
+          padding: 6px 0px;
+          width: 90%;
+
+          body.dark &{
+            color: $color-light;
+          }
+        }
+        .btn-buscar-derecha {
+          font-size: 20px;
+          margin-top: 12px;
+          padding-bottom:10px ;
+          margin-right:10px ;
+        }
+      }
+    }
+
+
+
+    .contenedor-gifs {
+      width: 1000px;
+
+      .tamano-gif-expandido{  
+        cursor: pointer;
+     
+        .gifExpandido{
+          width: 500px;
+         height: 500px;
+         margin-left: -250px;
+         margin-top: -250px;
+         }
+         .contenedor-botones-expandido{
+          bottom: 16%;
+          font-size: 20px;
+          width: 130px;
+          margin-left: 59%;
+          
+           
+         }
+         .cerrar-btn{
+          width: 100px;
+          margin-left: 70%;
+         font-size: 20px;
+          margin-top: 10%;
+         }
+        }
+    
+      .tamano-gif {
+        width: 240px;
+        height: 200px;
+        margin: 10px 5px;
+        z-index: 0;
+        cursor: pointer;
+      &:hover > .div-img{
+        display: block;
+      }
+       &:hover > .contenedor-botones{
+         display: block;
+       }
+     
+        .cerrar-btn{
+          display: none;
+          margin-top:166px;
+        }
+       
+        .gifs{
+          
+          width: 240px;
+          height: 200px;
+          margin-top: 0px;
+        }
+        .div-img{
+          transition:5s ease all ;
+          width: 240px;
+          margin-top: -204px;
+          height: 200px;
+          z-index: 3;
+          opacity: 60%;
+          position: absolute;
+          background-color: $color-principal;
+         
+         
+        }
+        .btn-movil{
+        display: none;
+        }
+        .contenedor-botones{
+          z-index: 4;
+          position: absolute;
+          margin-left: 118px;
+          width: 115px;
+          margin-top: 10px;
+          align-items: center;
+          display: none;
+          
+          .btn-gif{
+            opacity: 75%;
+            width: 32px;
+            height: 32px;
+            padding: 8px;
+            margin-left: 5px;
+            border-radius: 5px;
+            background-color: $color-light;
+            &:hover {
+              opacity:100%;
+            }
+          }
+        }
+      }
+    }
+
+    .linea{
+      width: 25%;
+    }
+    .titulo-resultado{
+      font-size: 35px;
+    }
+    .trending-topicos{
+      width: 750px;
+      .p-topicos{
+       
+        font-size: 16px;
+        
+        
+     
+     }
+     }
+  }
+}

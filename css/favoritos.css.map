@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,UAAU;EAEN,UAAU,EAAE,MAAM",
+"sources": ["../sass/favoritos.scss"],
+"names": [],
+"file": "favoritos.css"
+}

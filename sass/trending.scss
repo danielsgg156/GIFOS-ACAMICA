@@ -1,0 +1,322 @@
+.trending{
+  
+    width: 100%;
+    height: 430px;
+    background-color: $background-trending;
+    text-align: center;
+    body.dark &{
+        background-color: $color-dark-gray-trending;
+        .h2-trending{
+            color: $color-light;
+        }
+        .p-trending{
+            color: $color-light;
+        }
+    }
+    .h2-trending{
+        color: $color-principal;
+        font-size:20px;
+        font-family: 'Montserrat', sans-serif;
+     padding-top: 46px;
+    }
+    .p-trending{
+        font-size: 16px;
+        width: 168px;
+        margin: 10px auto;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .carrusel-trending{
+        margin-top:30px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        height: 250px;
+        
+        align-items: center;
+        .anterior{
+           display: none; 
+        }
+        .siguiente{
+            display: none;
+        }
+
+        .carrusel{
+        
+            width: 95%;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            height: 250px;
+            overflow:  scroll;
+            white-space: nowrap;
+            &::-webkit-scrollbar {
+                display: none;
+              }
+              .tamano-gif-expandido{
+                transition:0.3s ease all ;
+                background: $color-light;
+                width: 100%;
+                height: 100%;
+                position: fixed;
+                top: 0%;
+                left: 0%;
+                body.dark &{
+                 background-color: $color-dark-gray-trending;    
+                }
+                .gifExpandido{
+                  transition:0.3s ease all ;
+                  width: 250px;
+                  height: 250px;
+                position: absolute;
+                  left: 50%;
+                  margin-left: -125px;
+                  top: 50%;
+                  margin-top: -125px;
+                }
+                .div-img-expan{
+                  .nombre-gif{
+                    width: auto;
+                    font-size: 13px;
+                    position: absolute;
+                    top: 32%;
+                    left: 50%;
+                    margin-left: -123px;
+                
+                  }
+                }
+                 .contenedor-botones-expandido{
+                  color: #572ee5;
+                  position: absolute;
+                  bottom: 29%;
+                  font-size: 20px;
+                  width: 130px;
+                  margin-left: 54%;
+                 .fas {
+                  border: 1px solid $color-principal;
+                  border-radius:10px ;
+                  padding: 10px;
+                 margin-left: -16px ;
+                 
+                }
+              
+                 .far{
+                  border: 1px solid $color-principal;
+                border-radius:10px ;
+                padding: 10px;
+               
+              
+                }
+                }
+                .cerrar-btn{
+                  color: #572ee5;
+                  width: 100px;
+                  z-index: 12;
+                  margin-left: 76%;
+                 font-size: 20px;
+                  margin-top: 166px;
+                 }
+            }
+              .tamano-gif{
+                transition:0.3s ease all ;
+              width:243px;
+              height: 187px;
+              margin: 0 10px;
+              .gifs{
+                transition:0.3s ease all ;
+              width: 243px;
+              height: 187px;
+             position: relative;
+              margin-top: -172px;
+              }
+              .btn-movil{
+                position: relative;
+               width: 243px;
+                height: 187px;
+                z-index: 5;
+                 margin-top: 0px;
+              }
+              .cerrar-btn{
+
+                display: none;
+              }
+              .div-img{
+                display: none;
+              .nombre-gif{
+              
+                display: none;
+              }
+              }
+              .contenedor-botones{
+              display: none;
+               
+              }
+              
+              
+              }
+            
+        }
+    }
+}
+@media (min-width:1024px){
+    .trending{
+        height: 500px;
+        .carrusel-trending{
+            padding:0 10px 0 10px;
+            font-size: 30px;
+            height: 300px;
+            align-items: center;
+            color: $color-principal;
+        
+          .anterior{
+              padding: 8px 10px;
+               display: block; 
+               z-index: 2;
+               border: 1px solid $color-principal;
+               margin-top: 30px;
+               body.dark &{
+                border: 1px solid  $color-light;
+                color:  $color-light;
+              }
+            }
+            .siguiente{
+                border: 1px solid $color-principal;
+                display: block;
+                padding: 8px 10px;
+                z-index: 2; 
+                margin-top: 30px;
+                body.dark &{
+                  border: 1px solid  $color-light;
+                  color:  $color-light;
+                }
+            }
+            .efecto-flechas{
+                background-color: $color-principal;
+                color: white;
+                cursor: pointer;
+                body.dark &{
+
+                  background-color:  $color-light;
+                  color: $color-dark;
+                }
+            }
+            .carrusel{
+               scroll-behavior: smooth;
+               
+                width: 92%;
+                margin: auto;
+                height: 300px;
+               
+                .tamano-gif-expandido{  
+                   
+                    .gifExpandido{
+                      width: 500px;
+                      height: 500px;
+                      margin-left: -250px;
+                      margin-top: -250px;
+                     }
+                     .contenedor-botones-expandido{
+                      bottom: 17%;
+                      font-size: 30px;
+                      width: 130px;
+                      margin-left: 58%;
+                      .fas{
+                        &:hover{
+                          background-color: $color-principal;
+                          color: white;
+                        }
+                      }
+                      .far{
+                        &:hover{
+                          background-color: $color-principal;
+                          color: white;
+                        }
+                      } 
+                     }
+                  
+                
+                     .div-img-expan{
+                      .nombre-gif{
+            
+                        font-size: 20px;
+                        position: absolute;
+                        top: 20%;
+                        left: 50%;
+                        margin-left: -249px;
+                        color: #572EE5;
+                        font-family: 'Montserrat', sans-serif;
+                    }
+                  }
+                     .cerrar-btn{
+                      margin-top: 15%;
+                      margin-left: 76%;
+                     }
+                    }
+                
+                  .tamano-gif {
+                    width: 300px;
+                    height: 270px;
+                    margin: 10px 5px;
+                    z-index: 0;
+                    cursor: pointer;
+                  &:hover > .div-img{
+                    display: block;
+                  }
+                   &:hover > .div-img > .contenedor-botones{
+                     display: block;
+                   }
+                 
+                    .cerrar-btn{
+                      display: none;
+                    }
+                   
+                    .gifs{
+                      position: relative;
+                      z-index: 2;
+                      width: 300px;
+                      height: 270px;
+                      margin-top: 0px;
+                    }
+                    .div-img{
+                      transition:5s ease all ;
+                      width: 300px;
+                      margin-top: -278px;
+                      height: 270px;
+                      z-index: 3;
+                      opacity: 60%;
+                      position: relative;
+                      background-color: $color-principal;
+                      .nombre-gif{
+                        
+                      }
+                    }
+                    .btn-movil{
+                    display: none;
+                    }
+                    .contenedor-botones{
+                      z-index: 4;
+                      position: relative;
+                      margin-left: 174px;
+                      width: 115px;
+                      padding-top: 16px;
+                      align-items: center;
+                      display: none;
+                      
+                      .btn-gif{
+                        opacity: 75%;
+                        width: 32px;
+                        height: 32px;
+                        padding:0px;
+                        margin-left: 5px;
+                        border-radius: 5px;
+                        background-color: $color-light;
+                        &:hover {
+                          opacity:100%;
+                        }
+                      }
+                    }
+                  }
+            }
+        }
+    }
+}
